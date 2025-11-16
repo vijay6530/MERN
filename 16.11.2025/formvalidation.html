@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="register"></form>
+    <input type="text" placeholder="enter name" id="name"/>
+    <span class="errormessage"></span>
+    <input type="email" placeholder="enter email" id="email"/>
+     <span class="errormessage" class="error"></span>
+     <button type="submit">submit</button>
+
+     <script>
+        document.getElementById("register").addEventListener("submit",()=>{
+            event.preventDefault()
+            let name=document.getElementById("name").value.trim();
+            let email=document.getElementById("email").value.trim();
+
+            let valid=true;
+
+
+            console.log("name::"+name)
+            console.log("email::"+email)
+            if(name=="")
+                {
+                    document.getElementById("errormessage",innerHTML="name is required")
+
+                }
+        
+
+
+
+
+        if(valid)
+        {
+            alert("registration successfully"+name+email)
+        }
+        })
+     </script>
+</body>
+</html>

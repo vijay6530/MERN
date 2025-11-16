@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>domevents</title>
+</head>
+<body>
+    <button id="demo" >click me</button>
+    <h1 id="one">i am vijay</h1>
+    <button id="btn">click</button>
+    <input type="text" id="box">
+    <script>
+        document.getElementById("box").addEventListener("keyup",function()
+    {
+        console.log("keyup"+event.key)
+    })
+        document.getElementById("demo").addEventListener("click",function()
+    {
+        alert("example of on click")
+        document.getElementById("one").setAttribute("style","color:blue;")
+    })
+    document.getElementById("btn").addEventListener("click",(event)=>{
+        console.log(event.type)
+    })
+    </script>
+</body>
+</html>

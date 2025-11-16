@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name ="registration">
+        <input name="studentname" placeholder="enter studentname"/>
+        <input name="studentmobile" placeholder="enter student mobile"/>
+
+
+    </form>
+    <script>
+        var regform=document.forms["registration"]
+        var studentname=regform["studentname"].value;
+        var studentmobile=regform["studentmobile"].value;
+    </script>
+    <form name="maths">
+        <input name="num1"/>
+        <input name="num2"/>
+    </form>
+    <button onclick="addition()">add</button>
+    <script>
+        function addition()
+        {
+            var numbers=document.forms["maths"]
+        var num1=parseInt(numbers["num1"].value)
+        var num2=parseInt(numbers["num2"].value)
+        document.write(num1+num2)
+        }
+    </script>
+</body>
+</html>

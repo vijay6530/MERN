@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <div id="example">
+        
+      
+    </div>
+    <img id="imgexample">
+    <button onclick="changeimage('https://images.pexels.com/photos/34513508/pexels-photo-34513508.jpeg')">java</button>
+    <button onclick="changeimage('https://images.pexels.com/photos/26698447/pexels-photo-26698447.jpeg')">python</button>
+    <script>
+var h1tag=document.getElementById("demo")
+h1tag.innerHTML="i am h1 tag"
+console.log(h1tag)
+
+function changeimage(imagepath)
+{
+    document.getElementById("imgexample").setAttribute("src",imagepath)
+}
+
+</script>
+</body>
+</html>
