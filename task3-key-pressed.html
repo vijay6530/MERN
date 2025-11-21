@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Key Pressed Event</title>
+</head>
+<body>
+  <input type="text" id="input" placeholder="Type here..." />
+  <div id="output"></div>
+  <script>
+    document.getElementById('input').addEventListener('keydown', function(event) {
+      document.getElementById('output').textContent = 'Key Pressed: ' + event.key;
+    });
+  </script>
+</body>
+</html>

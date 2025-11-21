@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+  <style>
+    .error { color: red; }
+  </style>
+</head>
+<body>
+  <form id="myForm">
+    Name: <input type="text" id="name" required /><span class="error" id="nameErr"></span><br />
+    Mobile: <input type="text" id="mobile" required /><span class="error" id="mobileErr"></span><br />
+    Message: <input type="text" id="message" required /><span class="error" id="messageErr"></span><br />
+    <button type="submit">Submit</button>
+  </form>
+  <script>
+    document.getElementById('myForm').addEventListener('submit', function(e) {
+      let isValid = true;
+      // Reset errors
+      document.getElementById('nameErr').textContent = '';
+      document.getElementById('mobileErr').textContent = '';
+      document.getElementById('messageErr').textContent = '';
+
+      // Name validation
+      if (document.getElementById('name').value.trim() === "") {
+        document.getElementById('nameErr').textContent = " Name required.";
+        isValid = false;
+      }
+      // Mobile validation: Should be 10 digits numeric
+      const mob = document.getElementById('mobile').value.trim();
+      if (!/^\d{10}$/.test(mob)) {
+        document.getElementById('mobileErr').textContent = " Must be 10 digits.";
+        isValid = false;
+      }
+      // Message validation
+      if (document.getElementById('message').value.trim() === "") {
+        document.getElementById('messageErr').textContent = " Message required.";
+        isValid = false;
+      }
+      if (!isValid) e.preventDefault();
+    });
+  </script>
+</body>
+</html>

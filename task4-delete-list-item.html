@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Delete List Item</title>
+</head>
+<body>
+  <ul id="myList">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Mango</li>
+  </ul>
+  <script>
+    document.getElementById('myList').addEventListener('click', function(event) {
+      if (event.target.tagName === 'LI') {
+        event.target.remove(); // Delete clicked item
+      }
+    });
+  </script>
+</body>
+</html>
